@@ -1,4 +1,5 @@
 public class Main {
+<<<<<<< HEAD
     static Loan[] Loans = new Loan[100];
     static int loansCount = 0;
 
@@ -35,13 +36,23 @@ public class Main {
         }
         return profit;
     }
+=======
+>>>>>>> 589024651f7c981ee5c67a73f05ff653573375d0
 
     public static void main(String[] args) {
-        addLoan("Alice Betsy", 10, 0.1);
-        addLoan("Ben Chee", 20, 0.2);
-        addLoan("Chris Davis", 30, 0.3);
-        setAsPaid("Ben Chee");
-        listLoans();
-        System.out.println("profit: " + calculateProfitEarned());
+        LoanManager m1 = new LoanManager();
+        m1.addLoan("Alice Betsy", 10, 0.1);
+        m1.addLoan("Ben Chee", 20, 0.2);
+        m1.addLoan("Chris Davis", 30, 0.3);
+        m1.setAsPaid("Ben Chee");
+        m1.listLoans();
+        System.out.println("profit from m1: " + m1.calculateProfitEarned());
+
+        LoanManager m2 = new LoanManager();
+        m2.addLoan("Alice Betsy", 500, 0.05);
+        m2.addLoan("Emily Hee", 25, 0.15);
+        m2.setAsPaid("Alice Betsy");
+        m2.listLoans();
+        System.out.println("profit from m2: " + m2.calculateProfitEarned());
     }
 }
