@@ -12,7 +12,7 @@ public class Main {
         for (int i=0; i< loansCount; i++){
             Loan loan = Loans[i];
             if (loan.getBorrower().equals(borrower)){
-                loan.setPaid(true);
+                loan.setPaid();
             }
         }
     }
